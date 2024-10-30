@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* text-transform: capitalize; */
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: mediumslateblue;
+}
+
+html{
+    font-size: 75.84%;
+    /* position: relative; */
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: #ccc;
+    padding: 10px;
+}
+
+.app{
+    background-color: navy;
+    padding: 15px 20px 20px 15px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 3px 5px 8px 8px rgba(0, 0, 0, 0.2);
+    margin: 40px auto;
+}
+
+.app h2 {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app h2 img {
+    width: 40px;
+    height: auto;
+    margin-left: 12px;
+}
+
+form {
+    width: 100%;
+    padding: 30px 12px 30px 15px;
+    display: grid;
+    grid-template-columns: 9fr 2fr;
+    gap: 10px;
+    position: relative;
+    margin-top: 20px;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+form input:focus{
+    outline: none;
+}
+
+form button {
+    border: none;
+    outline: none;
+    background-color: #0cb00c;
+    color: #fff;
+    border: 1px solid #0cb00c;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+#list-container{
+    position: relative;
+    margin-top: .5rem;
+    padding: .6rem 1rem;
+    width: 100%;
+}
+
+.task {
+    background-color: navy;
+    box-shadow: 3px 5px 8px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 8fr 2fr 2fr;
+    gap: 12px;
+    padding: 10px 20px;
+    align-items: center;
+    width: 100%;
+}
+
+#pending-task {
+    color: white;
+    text-align: center;
+}
+
+.task:not(:first-child){
+    margin-top: 18px;
+}
+
+.task input[type="checkbox"]{
+    position: relative;
+    appearance: none;
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.task input[type="checkbox"]::before{
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.task input[type="checkbox"]:checked{
+    background-color: #fff;
+}
+
+.task input[type="checkbox"]:checked::before{
+    position: absolute;
+    content: '\2714';
+    color: black;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.task button {
+    width: 100%;
+    padding: 8px 5px;
+    border: none;
+    border-radius: 15px;
+    white-space: nowrap;
+}
+
+.edit{
+    background-color:#000 ;
+    cursor: pointer;
+}
+
+.editimg {
+    width: 15px;
+}
+
+.delete{
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.deleteimg{
+    width: 15px;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #ddd;
+}
+
+#error{
+    background-color: whitesmoke;
+    padding: 15px 25px;
+    color: red;
+    font-size: 1.4rem;
+    border-radius: 10px;
+    box-shadow: 3px 5px 8px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    text-wrap: nowrap;
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
